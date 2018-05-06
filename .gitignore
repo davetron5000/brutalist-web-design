@@ -1,0 +1,6 @@
+# We don't vendor our libraries
+node_modules
+# We don't check in our production distro
+production  
+# We don't check in our development distro
+development
