@@ -1,11 +1,229 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Brutalist Web Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta charset="utf-8">
   </head>
-  <body>
-    <h1 class="avenir">Open the Web Inspector</h1>
-    <p class="times">
-      THis is a test
-    </p>
+  <body class="bg-light-gray near-black">
+    <main class="pa3 center  measure-wide lh-copy" class="calisto">
+      <article class="bb b--silver mb3">
+        <h1 class="f-subheadline helvetica lh-solid mt0"><small class="f2">Guidelines for</small> Brutalist Web Design</h1>
+        <ul class="f4">
+          <li>
+            <a href="#readable-content">
+              The content is readable on all reasonable screens and devices.
+            </a>
+          </li>
+          <li>
+            <a href="#clickables">
+              Only Hyperlinks and Buttons respond to clicks.
+            </a>
+          </li>
+          <li>
+            <a href="#hyperlinks">
+              Hyperlinks are underlined.  Buttons look like buttons.
+            </a>
+          </li>
+          <li>
+            <a href="#back-button">
+              The Back Button should work as expected.
+            </a>
+          </li>
+          <li>
+            <a href="#scrolling">
+              The page scrolls as needed to allow viewing the content.
+            </a>
+          </li>
+          <li>
+            <a href="#fidelity">
+              Basic functions of the browser and operating system work as expected.
+            </a>
+          </li>
+          <li>
+            <a href="#decoration">
+              Decoration only when needed.
+            </a>
+          </li>
+        </ul>
+      </article>
+      <section class="cf mt2">
+        <h1 class="f1 lh-solid mt0 helvetica">Brutalist Web Design</h1>
+        <p>
+          The term <em>brutalism</em>
+          is often associated with <a href="https://en.wikipedia.org/wiki/Brutalist_architecture">Brutalist Architecture</a>, but the tenets of it as applied to architecture can be applied to other constructions.  This website documents its application to website design.
+        </p>
+        <aside class="fl mw-100 w-third-ns w-50 pt2 pr3 pb2">
+            <img src="images/brutalist_firestation.png" alt="Washington DC Engine Company 02's Fire Station" class="db">
+          <p class="ma0 pa0 helvetica f6 fw2 i">
+            An example of brutalist architecture, DC Engine Company 02's Fire Station
+            (<a href="images/brutalist_firestation.png" target="_new">View full-size</a>).
+          </p>
+        </aside>
+        <p>
+          The term <em>brutalism</em> is derived from the French <em>betón brut</em>, meaning “raw concrete”, which is what most brutalist buildings are made from.  It's the term <em>raw</em> that is most applicable to Brutalist Web Design.
+        </p>
+        <p>
+          In a sense, brutalism is a form of <a href="https://en.wikipedia.org/wiki/Truth_to_materials">truth to materials</a>, which means that the nature of the construction of something should not be hidden.  While one apply this to web design by showing the HTML source used to create a webpage, it's more appropriate to apply the concept to the behavior and look of the <em>web page</em> as viewed in a <em>web browser</em>.  This is likely how you are reading this paragraph now.
+        </p>
+      </section>
+      <section>
+        <h1 class="helvetica f3">Exploring the Guidliness</h1>
+        <section>
+          <a name="readable-content">
+            <h1 class="f4">
+              The content is readable on all reasonable screens and devices.
+            </h1>
+            <p>
+              Web pages are designed to be read.  As part of being true to its nature, a web page should be readable in the ways in which it's possible to be viewed.  This means a wide variety of screen sizes and even assistive technologies like <a href="https://en.wikipedia.org/wiki/Screen_reader">screen readers</a>, which don't have a screen at all.
+            </p>
+            <p>
+              Standard web technologies and techniques provide the means to do this.  By using semantic markup and no styling a web site would be readonable on all screens and devices.  If styling is needed, CSS provides a way to ensure that styling is applied appropriately.  For example, this website ensures that line lengths are around 80 characters or less—a comfortable width for reading—on large monitors, laptops, and mobile phones.
+            </p>
+          </a>
+        </section>
+        <section>
+          <a name="clickables">
+            <h1 class="f4">
+              Only Hyperlinks and Buttons respond to clicks.
+            </h1>
+            <p>
+              Although JavaScript allows any element to respond to click events, a web page is not an application.  A web page is a <a href="https://en.wikipedia.org/wiki/Hypertext">hypertext</a> document that allows data to be submitted to a server via a form.  To be true to its nature, a web page should only allow hyperlinks and buttons to be clicked.  To allow other elements to respond to clicks is unnecessary functionality for a web page.
+            </p>
+            <p>
+              In particular, clicking elements such as images or undecorated text will take the user away from the content unexpectedly.  No user wants this, and to do so betrays the very nature of a web page.
+            </p>
+          </a>
+        </section>
+        <section>
+          <a name="hyperlinks">
+            <h1 class="f4">
+              Hyperlinks are underlined.  Buttons look like buttons.
+            </h1>
+            <p>
+              The creation of the world-wide web popularized the hyperlink, and the convention since the dawn of the web is that links are underlined (and often set in blue text).  This is a powerful convention that immediatley indicates to a user that there is more information to be found by clicking the link.  Underlining links is the simplest way to stay true to the nature of a web page.
+            </p>
+            <p>
+              Web pages also allow the submission of data to a server, called a <em>form submission</em>.  Historically, this has been done with a button like so:
+            </p>
+            <form class="ba br1 pa3">
+              <label for="email" class="fw1 helvetica tracked ttu">Enter your Email</label>
+              <input class="db w-100 mt1 mb2" type="email" id="email" name="email" placeholder="e.g. pat@example.com">
+              <input type="submit">
+            </form>
+            <p>
+              Notice that the browser renders this button to look like a button in the computer's visual language.  Designers often dislike this default rendering and re-style it to look like a hyperlink or even unstyled text.  This betrays the nature of what a button is.  While the use of the default rendering isn't mandatory, it's trivial to match the visual style of the web page and still keep buttons looking like buttons:
+            </p>
+            <form class="ba br1 pa3 bg-washed-yellow cf">
+              <label for="email" class="b f4 baskerville">Enter your Email</label>
+              <input class="db w-100 mt1 mb2 avenir" type="email" id="email" name="email" placeholder="e.g. pat@example.com">
+              <input type="submit" class="baskerville fr bg-animate hover-bg-light-yellow ba pointer br3 pa2 mt1 bg-yellow">
+            </form>
+            <p>
+            The key thing to remember is that a web page is not an app or a computer program, it's for reading content and interacting with a server.
+            </p>
+          </a>
+        </section>
+        <section>
+          <a name="back-button">
+            <h1 class="f4">
+              The Back Button should work as expected.
+            </h1>
+            <p>
+              Because of the webbed nature of hypertext, web browser have included a button to go back.  This button allows a user to effectively undo their last click.  When the back button does not take the user back to where they were it creates confusiona nd frustration, and is fundamentally betraying the nature of a webpage and hypertext.
+            </p>
+            <p>
+              Fortunately, by allowing only hyperlinks and buttons to be clickable, the back button will always work.  Going backafter a form submission is semantically unclear, but browser handle this.  This means that it takes extra effort to break the back button.
+            </p>
+          </a>
+        </section>
+        <section>
+          <a name="scrolling">
+            <h1 class="f4">
+              The page scrolls as needed to allow viewing the content.
+            </h1>
+            <p>
+              The nature of a web page is that it has content you wish to read, but that content might not fit on the screen all at once (in fact, it rarely would).  With the printed page, readers flip through pages to read the content beyond what they are looking at.  Because a computer screen allows scrolling content, this is the preferred method adopted by web browser.
+            </p>
+            <p>
+              Nevertheless, many web pages artifically paginate their content, requiring the user to both scroll down to the end of the page, and then click a hyperlink to continue reading.  Some web pages even hide content that would otherwise be viewable, requiring users to click a button to reveal the content on the page they are alread in.  This is a fundamental betrayal of what a web page is.
+            </p>
+          </a>
+        </section>
+        <section>
+          <a name="fidelity">
+            <h1 class="f4">
+              Basic functions of the browser and operating system work as expected.
+            </h1>
+            <p>
+              The web browser is how web pages are consumed and displayed to the user.  Web browser run on a variety of platforms and operating systems.  These systems include features and idioms common to the operating system that users rely on to work.  For example, copying text in a word processor copies the selected text to the pastboard.  This should be the behavior of a web page as well.
+            </p>
+            <p>
+              Scrolling is another example.  Scrolling content should simply move the content the same as in other applications.  It should not change, reveal, or hide content.  Pasting into a form should be possible and paste the contents of the pasteboard.  Browser support this by default, so it takes special effort to break these conventions and idioms.
+            </p>
+          </a>
+        </section>
+        <section class="cf">
+          <a name="decoration">
+            <h1 class="f4">
+              Decoration only when needed.
+            </h1>
+            <aside class="fl helvetica f6 fw3 w-40 w-50-ns br2 bg-washed-blue dark-gray pl2 pr2 pt1 pb1 mr2 mt1 mb1 tr">
+              <span class="fl">
+                🧐
+              </span>
+              <p>
+                Web pages don't all need to look the same—they just need to stay true to what they are.
+              </p>
+            </aside>
+            <p>
+              A web page is not an application.  The design should serve the purpose, which is <strong class="b">to deliver content to the user</strong>.
+              Decoration is not strictly required to do this,
+              but boring visual design isn't required, either.  For example, this web page contains fonts of different sizes and faces.  It doesn't use pure black and white as its colors.  This section has a pull-quote to emphasize a point made below. It uses a blue background and a freakin' emoji.
+            </p>
+            <p>
+              Excessive decoration can take the user away from the web page's primary purpose or creating unintended complexities when using the web page.  Web pages don't all need to look the same—they just need to stay true to what they are.
+            </p>
+          </a>
+        </section>
+      </section>
+      <section>
+        <a name="few-sites-are-apps"></a>
+        <h1 class="helvetica f2 lh-solid">
+          Very Few Web Sites are <em>Applications</em>
+          <a class="f6 fw1 db mt2 mb1" href="#few-sites-are-apps">Link Here</a>
+        </h1>
+        <p>
+          While a web browser and HTTP is a great platform for application delivery, most such applications are internal software or serve small audiences.  Most web sites that most people visit are merely serving content.  Sites like Facebook and Twitter are pouplar examples—you go to these sides to read what's posted there.  Even commerce sites like Amazon primarly serve content to you.  You interact in a simple way by clicking buttons to populate a shopping cart or check out.
+        </p>
+        <p>
+          None of these sites require anything more than what the web's true nature gives us.  Yet, interacting with sites like these and others is unpleasant.  It is difficult to read the content you are there to read.  It's cumbersome to navigate between different areas of the site. On a mobile device, it's worse, since these sites are full of land-mines that respond to a finger-tap and whisk you away from what you are trying to read.
+        </p>
+        <p>
+          We would benefit if they embraced Brutalist Web Design.
+        </p>
+      </section>
+      <section>
+        <a name="what-can-you-do"></a>
+        <h1 class="helvetica f2 lh-solid">
+          What Can You Do?
+          <a class="f6 fw1 db mt2 mb1" href="#what-can-you-do">Link Here</a>
+        </h1>
+        <p>
+          By using semantic HTML and applying zero styling, a web page is emminetly readable and usable, adhering to all the tennets of Brutalist Web Design.  If your content is good, your visitors will be very happy.
+        </p>
+        <p>
+          As you design and build your site, consider the guidelines here.  Remove that ridiculous hero image from the top of your page.  Don't drop-in a JavaScript email sign-up form.  Fight the urge to make your links unadorned, and animate the page when the user clicks on elements.  Add styling and decoration to solve a problem only.
+        </p>
+      </section>
+    </main>
+    <footer class="light-gray bg-near-black">
+      <section class="pa3 center measure-wide lh-copy mt0" class="calisto">
+        <h1 class="helvetica f2 mt0">Colophon</h1>
+        <p>
+          This site was built in HTML by hand, however its general assembly and packaging are done use <a class="light-blue link underline" href="https://webpack.js.org">Webpack</a>.  The site is styled using <a class="light-blue link underline" href="http://tachyons.io/">Tachyons</a>.  Headings are set in Helvetica, with a fallback to the system sans-serif.  Body text is set in Calisto, with a fallback to the system serif.
+        </p>
+      </section>
+    </footer>
   </body>
 </html>
