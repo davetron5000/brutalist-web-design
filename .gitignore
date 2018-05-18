@@ -1,6 +1,8 @@
 # We don't vendor our libraries
 node_modules
 # We don't check in our production distro
-production  
+production
 # We don't check in our development distro
 development
+# Don't need to check in my session vim file
+Session.vim
