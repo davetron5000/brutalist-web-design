@@ -29,7 +29,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin(
       [ 
-        { from: './src/images/**/*', to: './images', flatten: true }
+        { from: './src/images/**/*', to: './images', flatten: true },
+        { from: './src/html/**/*',   to: '.',        flatten: true, ignore: [ "index.html" ] }
       ], 
       {
         debug: true
