@@ -20,7 +20,12 @@ module.exports = {
   },
   plugins: [
     new HtmlPlugin({
-      template: "./src/html/index.html"
+      template: "./src/html/index.html",
+      minify: {
+        collapseWhitespace: true,
+        conservativeCollapse: true,
+        removeComments: true
+      }
     }),
     new CopyWebpackPlugin(
       [ 

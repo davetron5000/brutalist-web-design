@@ -25,6 +25,9 @@
     "dev": "webpack $npm_package_config_webpack_args",
     "prod": "webpack $npm_package_config_webpack_args -p --env=production",
     "clean": "rm -rf production development",
-    "serve": "webpack-dev-server"
+    "serve": "webpack-dev-server",
+    "deploy": "yarn clean && yarn prod && yarn sync-s3 && yarn invalidate-cache",
+    "sync-s3": "aws s3 sync --cache-contro='max-age=3600' --profile=personal production/ s3://brutalist-web.design",
+    "invalidate-cache": "aws cloudfront create-invalidation --profile=personal --distribution-id=E1K5EAG31Z8JS2 --paths=/index.html"
   }
 }

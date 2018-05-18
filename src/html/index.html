@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta charset="utf-8">
   </head>
-  <body class="bg-light-gray near-black">
+  <body class="bg-near-white near-black">
     <main class="pa3 center  measure-wide lh-copy" class="calisto">
       <article class="bb b--silver mb3">
         <h1 class="f-subheadline helvetica lh-solid mt0 mb3"><small class="f2">Guidelines for</small> Brutalist Web Design</h1>
-        <h2 class="helvetica lh-solid mt0 fw3">Raw content, truth to its construction</h2>
+        <h2 class="helvetica lh-solid mt0 fw3">Raw content, true to its construction</h2>
         <ul class="f4">
           <li>
             <a href="#readable-content">
@@ -37,11 +37,6 @@
             </a>
           </li>
           <li>
-            <a href="#fidelity">
-              Browser and operating system functions are not impeded.
-            </a>
-          </li>
-          <li>
             <a href="#decoration">
               Decoration when needed and no unrelated content.
             </a>
@@ -60,10 +55,10 @@
           is often associated with <a href="https://en.wikipedia.org/wiki/Brutalist_architecture">Brutalist Architecture</a>, however it can apply to other forms of construction, such as web design.  This website explains how.
         </p>
         <figure class="fl mw-100 w-third-ns w-50 ma0 pa0  mr3 mt2 mb2">
-            <img src="images/brutalist_firestation.png" alt="Washington DC Engine Company 02's Fire Station" class="db ba b--silver">
+            <img src="images/washington-dc-ec-02-station-small.jpg" alt="Washington DC Engine Company 02's Fire Station" class="db ba b--silver">
           <figcaption class="ma0 pa0 helvetica f7 fw2 i">
             An example of brutalist architecture, DC Engine Company 02's Fire Station
-            <a href="images/brutalist_firestation.png" target="_new">View full-size</a>.
+            <a href="images/washington-dc-ec-02-station.png" target="_new">View full-size (11MB)</a>.
           </figcaption>
         </figure>
         <p>
@@ -83,7 +78,12 @@
         </p>
       </section>
       <section>
-        <h1 class="helvetica f2">Exploring the Guidelines</h1>
+        <a name="detailed-guidelines"></a>
+        <h1 class="helvetica f2 lh-solid">
+          <small class="f4 db">Detailed Guidelines for</small>
+          Brutalist Web Design
+          <aside class="mt0 fw1 dib f7"><a href="#detailed-guidelines">Permalink</a></aside>
+        </h1>
         <p>
           Below is a detailed look into each of the guidelines listed above.  As with all artistic constraints while you may find them frustrating, you should also find them inspiring.
         </p>
@@ -97,7 +97,7 @@
               Most websites exist to deliver content for you to consume, either words (such as on this site), or images, such as on Pinterest.  To be true to that nature, the content must be readable in all browsers.  Some screens are very large, while others are very small.  Some browsers, such as <a href="https://en.wikipedia.org/wiki/Screen_reader">screen readers</a>, have no screen at all.
             </p>
             <p>
-              By default, a website that uses <a href="https://www.w3.org/TR/html52/dom.html#elements">HTML tags as intended</a> and has no custom styling will be readable on all screens and devices. Only the act of explicit design will make the content less readable, though it can certainly make it more.  For example, this website does not use default styles, yet, it is readable on any size screen.
+              By default, a website that uses <a href="https://www.w3.org/TR/html52/dom.html#elements">HTML as intended</a> and has no custom styling will be readable on all screens and devices. Only the act of design can make the content less readable, though it can certainly make it more.  For example, this website does not use default styles, yet, it is readable on any size screen.
             </p>
           </a>
         </section>
@@ -108,10 +108,10 @@
               <aside class="mt0 fw1 dib f7"><a href="#clickables">Permalink</a></aside>
             </h1>
             <p>
-              A web page is a <a href="https://en.wikipedia.org/wiki/Hypertext">hypertext</a> document that allows for two primary forms of interaction: navigating a link to another location, and submitting information back to a server.  These functions are performed, respectively, by hyperlinks and buttons.
+              A website is a <a href="https://en.wikipedia.org/wiki/Hypertext">hypertext</a> document that allows for two primary forms of interaction: navigating a link to another location, and submitting information back to a server.  These functions are performed, respectively, by hyperlinks and buttons.
             </p>
             <p>
-              Although JavaScript allows any element to respond to a click, websites are not applications, and the vast majority of websites should have no need to resort to such heroics in order to allow the visitor to navigate or submit data.  Further, clickable areas of a page that are not obviously hyperlinks or buttons can confuse the visitor, causing them to perform unwanted actions.
+              Although JavaScript allows any element to respond to a click, websites are not applications, and the vast majority of websites should have no need to resort to such heroics in order to allow the visitor to navigate or submit data.  Further, clickable areas of a page that are not obviously hyperlinks or buttons can confuse the visitor, causing them to perform unwanted actions or miss links entirely.
             </p>
             <p>
               To trick or deceive the visitor goes against the nature of a website, which is to deliver information and interact honestly with a visitor.
@@ -125,15 +125,15 @@
               <aside class="mt0 fw1 dib f7"><a href="#hyperlinks">Permalink</a></aside>
             </h1>
             <p>
-              As mentioned when <a href="#clickables">discussing clicks</a>, only hyperlinks and buttons should respond to clicks, since this maintains an honest and transparent interaction with a visitor.  To maintain a truth to materials, it follows that the appearance of these elements should also be honest.
+              As mentioned when <a href="#clickables">discussing clicks</a>, only hyperlinks and buttons should respond to clicks, since this maintains an honest and transparent interaction with a visitor.  To maintain a truth to materials, it follows that the appearance of these elements should also be honest and clear.
             </p>
             <p>
-              A hyperlink has no analog in the real world. Convention dictates a hyperlink use an underline to reveal its existence.  Since the underline has no other place in modern typesetting, this convention has been unambiguous since the dawn of the web. There is no clearer indicator of more content than an underlined bit of text on a web page.
+              A hyperlink has no analog in the real world. Since the dawn of the web, convention dictates a hyperlink use an underline to reveal its existence (which is a wonderful solution, since underlining has no place in modern typesetting)  Because of this convention, there is no clearer indicator of more content than a bit of underlined text.
             </p>
             <p>
-              Buttons, however, do have an analog both in the real world and, more importantly, in the computer operating system in which a browser runs.  With no effort, every browser on every operating system renders a button in the idiomatic language of that computer (or should). Here is an example that applies no styling to the submit button:
+              Buttons, however, do have an analog in both the real world and computer programs.  The browser being a computer program, it stands to reason that buttons rendered in a browser should look like buttons rendered on the computer operating system running said browser.  With no effort at all, this is precisely what happens.  See for yourself:
             </p>
-            <figure class="ba pa3">
+            <figure class="ba b--gray pa3 ma0">
               <form class="pa3 bg-white black br2">
                 <label for="email" class="fw1 helvetica tracked ttu">Enter your Email</label>
                 <input class="db w-100 mt1 mb2" type="email" id="email" name="email" placeholder="e.g. pat@example.com">
@@ -147,13 +147,13 @@
               This button is unambiguous, both in its function and its difference from a hyperlink.  Where a link promises more information for the visitor, a button agrees to submit <em>the visitors information</em> to the server.  Hiding this interaction behind a hyperlink or unadorned text betrays the core nature of a website.
             </p>
             <p>
-              That said, the default visual appearance of a button is often unpleasant.  Fortunately, many forms indicate button-ness to a visitor, and it's often trivial to style a button to both match the visual language of a site while also looking eminently pressable.  Here is an example of a site using a yellow color scheme and serifed fonts that has an obvious button:
+              That said, the default visual appearance of a button is often unpleasant or clashes with the visual language of the site.  Fortunately, many forms indicate button-ness to a visitor, and it's often trivial to style a button to both match the visual language of a site while also looking eminently pressable.  Here is an example of a site using a yellow color scheme and serifed fonts that has an obvious button:
             </p>
-            <figure class="ba pa3">
+            <figure class="ba b--gray pa3 ma0">
               <form class="pa3 bg-washed-yellow black br2 cf">
-                <label for="email" class="b f4 mid-gray baskerville">Enter your Email</label>
+                <label for="email" class="b db f4 mb2 mid-gray baskerville">Enter your Email</label>
                 <input class="db w-100" type="email" id="email" name="email" placeholder="e.g. pat@example.com">
-                <input type="submit" class="baskerville fr bg-animate mid-gray hover-bg-light-yellow ba pointer br3 pa2 mt1 bg-yellow">
+                <input type="submit" class="baskerville fr bg-animate mid-gray hover-bg-light-yellow ba pointer br3 pa2 mt3 bg-yellow">
               </form>
               <figcaption>
                 <p class="f7 i fw1 red ma0"><br>Note: this is not a real form</p>
@@ -177,13 +177,10 @@
               </figcaption>
             </figure>
             <p>
-              All browsers have a built-in button called the <em>back button</em>.  This promises to take the visitor to the last thing they saw prior to their most recent mouse click.  On a website that adheres to Brutalist Web Design, the last page they saw is almost always the one where they most-recently clicked a hyperlink.
+              All browsers have a built-in button called the <em>back button</em>.  This button is form of “undo”, taking the user back to where they were before their last navigational click.
             </p>
             <p>
-              It requires a confluence of design and programming to break this feature of all web browsers, as it works by default even in the face of intense styling.  Although a form submission creates a semantically unclear situation for the back button, standard browsers do the best they can to avoid confusing the visitor (improving this situation <em>is</em> the time to bring design and programming together in service to the visitor).
-            </p>
-            <p>
-              The back button is often the visitor's only escape from a mistake they've made, and it's unfortunately common that going back creates further problems due to a broken back button.
+              To break this core and enduring feature of the web requires a confluence of design and programming (such feats are better applied to smoothing the experience of going back after a form submission).  It also requires either ignorance of or contempt for the site visitor, as the back button is often their only means of undoing an errant click.
             </p>
           </a>
         </section>
@@ -194,16 +191,19 @@
               <aside class="mt0 fw1 dib f7"><a href="#scrolling">Permalink</a></aside>
             </h1>
             <p>
-              A website is not a book. It affords reading by scrolling, not flipping pages.  When content cannot fit entirely on the screen—and it often can't—browsers allow scrolling the view so that the content can be read at the visitor's pace.  Although extensive content requires sections that should appear on different pages, artificial insertion of pages or willful obfuscation of content to suit advertisers is not in the interest of visitors, and betrays the core nature of what a website is.
+              A website is not a book or a magazine.  Because it's viewed in a browser, users can scroll the browser's viewport to read content that can't fit on one screen.  This mechanism works beautifully and allows visitors to read content uninterrupted by clicking and page-reloading.
             </p>
             <p>
-              By default, the content on a page can be scrolled in the visitor's preferred method.  Like the back button, this can only be broken by intentional design and careless implementation.  Advertisers need not suffer from scrollable content, however.
+              While long-form content may require navigation and multiple pages, there's rarely need to artificially paginate articles, blog posts, or other medium-length content simply to satisfy advertisers or inflate engagement numbers.
+            </p>
+            <p>
+              Scrolling also allows the visitor to consume content at their pace using a method they prefer.  Like the back button, this can only be broken by intentional design and careless implementation.  Advertisers need not suffer from scrollable content, however.
             </p>
             <aside class="baskerville tc ml5-ns mr5-ns pa1 ba br1 bg-near-white dark-gray">
               <p class="b tracked-tight helvetica tl ml2 mt0">Promotion</p>
               <h1 class="f4 mb1">Level up As a Technical Leader</h1>
               <h2 class="f5 tracked-tight fw1 ttu mt0">11 Practices You Can Start Doing Now</h2>
-              <img src="/images/sweng-cover.png" class="w-33">
+              <img src="/images/sweng-cover.png" class="w-33 shadow-5">
               <h3 class="f4 b">
                 <form method="get" action="http://bit.ly/dcsweng">
                   <input class="pa2" type="submit" value="Buy Now $25">
@@ -211,21 +211,7 @@
               </h3>
             </aside>
             <p>
-              That was an ad for one of my books.  It was clearly marked, and gone in a second as you kept reading.  No need to trick you.  I don't need to fool you into “engaging” with this site.  I trust you'll share this content or buy my book if you find these words of interest.  If not, hopefully you'll have a fond memory of a pleasant reading experience.
-            </p>
-          </a>
-        </section>
-        <section class="mt4">
-          <a name="fidelity">
-            <h1 class="helvetica f4">
-              Browser and operating system functions are not impeded.
-              <aside class="mt0 fw1 dib f7"><a href="#fidelity">Permalink</a></aside>
-            </h1>
-            <p>
-              When reading a website, visitors often scroll (as <a href="#scrolling">mentioned above</a>), copy text to cite it, or paste text to submit to the server.  A web browser makes these features available in an idiomatic way, based on the visitor's operating system.  These features must work.
-            </p>
-            <p>
-              That JavaScript allows these core features to be impeded is not a reason to do so. It requires careful programming to remove such features from a website.  Doing so subverts the core nature of a website, creating a visitor-hostile space devoid of comfort and safety.
+              That was an ad for one of my books.  It was clearly marked, and easy to scroll past while you continue to read this site. It might not be the most creative way to place an advertisement amongst the text, but it demonstrates clearly that the visitors core need to easily consume a site's content need not be at odds for that site to sell advertising.
             </p>
           </a>
         </section>
@@ -235,9 +221,9 @@
               Decoration when needed and no unrelated content.
             </h1>
             <p>
-              A web page is not an application or a video game.  It is for content, and so its design must be subservient to that purpose. From this truth all visual styling must follow.  This needn't imply a boring website, nor does it require that all websites look the same.
+              A website is not an application or a video game.  It is for content, and so its design must serve that purpose. Being true to these materials need not imply a boring website or require that all sites look the same.
             </p>
-            <aside class="dn db-ns fl helvetica f6 fw3 w-50-ns br2 bg-washed-blue dark-gray pl2 pr2 pt1 pb1 mr3 mt1 mb1 tr">
+            <aside class="dn db-ns fl helvetica f6 fw3 w-50-ns bg-washed-blue dark-gray pl2 pr2 pt1 pb1 mr3 mt1 mb1 tr">
               <span class="fl">
                 🧐
               </span>
@@ -246,13 +232,13 @@
               </p>
             </aside>
             <p>
-              For example, unless you are on a small screen, this section has a pull quote with a washed blue background, a different text font, and an emoji!  While this design is certainly decoration, it's not distracting.  It serves that content instead of overshadowing it.
+              For example, this section has a pull quote with a washed blue background, a different text font, and an emoji!  While this design employs decoration, it's not distracting (on a small screen, however, it is, so it's not shown to those visitors).
             </p>
             <p>
-              Excessive decoration reverses the roles, distracting the visitor and hiding the content.  Unrelated content, such as nonsensical links to false stories, also distracts.
+              Decoration for its own sake, often to satisfy the vanity of the designer, goes counter to Brutalist Web Design.  Such needless decoration distracts the visitor from the reason for visiting and makes the content secondary.
             </p>
             <p>
-              While you should encourage the visitor to explore other parts of your website, do so in harmony with the page they are on.  Nothing makes less sense that the first bit of content on a page encouraging you to leave immediately to read another story or sign up for a mailing list.  Compelling content will drive engagement, not tricks.
+              The same can be said of unrelated content, such as misleading links, sensationalist headlines, or distractign images.  These all attempt to take the visitor away from the content either for advertising or to create a false increase in “engagement”. Effort should be spent on compelling content, not trickery.  Content drives engagement.
             </p>
           </a>
         </section>
@@ -262,13 +248,13 @@
               Performance is a feature.
             </h1>
             <p>
-              Websites aren't physical like a book or magazine.  Their contents must be downloaded over a computer network and then rendered in a web browser.  This takes time, and visitors are accustomed to this up to a point.
+              Websites aren't physical like a book or magazine.  Their contents must be downloaded over a computer network and then rendered in a web browser.  This takes time, but visitors are accustomed to this (up to a point).
             </p>
             <p>
               Consider that the entirety of <i>Pride and Prejudice</i> by Jane Austen is  <span class="nowrap">708 kilobytes</span>.  To download this much data using a very slow mobile connection would be around one second (try it for yourself by <a href="https://www.gutenberg.org/files/1342/1342-0.txt">reading it on Project Gutenberg</a>).  <i>Pride and Prejudice</i> is over 200 pages long, and would take <a href="https://www.howlongtoreadthis.com/book_details.php?asin=1503290565">over three hours</a> to read.  Certainly a news article, tweet, or product catalog can be downloaded and rendered in a comparable amount of time to a <em>novel</em>.
             </p>
             <p>
-              The good news is that by adhering to the other guidelines, your website will download and render quickly. Since it embraces its nature and leverages its raw materials, it allows the entire system of network, browser, content, and operating system to work together smoothly and efficiently.  Even with decoration, advertising, and some imagery, a website embracing Brutalist Web Design will respect your visitors time, bandwidth, and battery.
+              The good news is that by adhering to the other guidelines, your website will download and render quickly. By emrabcing its nature and materials, a website adhering to Brutalist Web Design is fast.  It allows the system of network, browser, content, and operating system to work together smoothly and efficiently, as they were designed to.  Even with decoration, advertising, and imagery, a website embracing Brutalist Web Design will respect your visitors time, bandwidth, and battery.
             </p>
           </a>
         </section>
@@ -279,10 +265,10 @@
           <a class="f6 fw1 db mt2 mb1" href="#what-can-you-do">Permalink</a>
         </h1>
         <p>
-          How much better would the web be if every site embraced Brutalist Web Design?
+          How much better would the web be if every site embraced Brutalist Web Design?  How amazing would it be to have readable text, clearly-marked interaction points, unobtrusive advertising, all wrapped up in a fast-loading site you could consume using the native tools of your chosen device?
         </p>
         <p>
-          <a href="http://mrmrs.cc">A friend</a> gave me design advice once.  He said to start with left-aligned black text on a white background, and to apply styling only to solve a specific problem.  If you embrace this, you will embrace Brutalist Web Design.  Focus on your content, and your visitors will be happy with your site.  Focus on decoration or tricking your visitors into clicking ads, and your content will suffer, along with your visitors.
+          <a href="http://mrmrs.cc">A friend</a> gave me design advice once.  He said to start with left-aligned black text on a white background, and to apply styling <em>only to solve a specific problem</em>.  This is good advice.  Embrace this, and you embrace Brutalist Web Design.  Focus on your content and your visitors will enjoy you and your website.  Focus on decoration or tricking your visitors into clicking ads, and your content will suffer, along with your visitors.
         </p>
         <p>
           Here are some specific tips:
@@ -291,7 +277,7 @@
           <li>Understand the semantic meaning of HTML elements.</li>
           <li>Learn about typography.</li>
           <li>Try designing for a small screen by default.</li>
-          <li>Learn from designers about their choices.</li>
+          <li>Learn from designers about the choices they made and why they made them.</li>
           <li>When in doubt, do what <a href="https://en.wikipedia.org/wiki/Tron">Tron</a> does:
             <span class="b dib">
               fight for the users.
@@ -308,7 +294,7 @@
             Everything on this site is copyright &copy; 2018, by David Copeland and licensed
             under the Creative Commons <a class="light-blue" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a> license.  The <a class="light-blue" href="https://github.com/davetron5000/brutalist-web-design">source is hosted on GitHub</a>.
           </p>
-          <img class="dn db-ns ml3 mb2 fr w-25 mt1 ml0 ba b--moon-gray" src="images/DavidCopeland.png" alt="Picture of this site's author, David Copeland">
+          <img class="dn db-ns ml3 mb2 fr w-25 mt1 ml0 ba b--moon-gray" src="images/david-copeland-portrait.jpg" alt="Picture of this site's author, David Copeland">
           <p>
             I go by “Dave”, write <a class="light-blue" href="https://naildrivin5.com/books/">books</a> as “David Bryant Copeland” and am <a class="light-blue" href="https://twitter.com/davetron5000">@davetron5000</a> on most social media platforms.  I'm a programmer and author, currently working as a director of engineering at <a class="light-blue" href="https://multithreaded.stitchfix.com/careers/">Stitch Fix</a> (warning: <em>not a Brutalist Web Design</em>).  I write occasionally on my <a class="light-blue" href="https://naildrivin5.com">blog</a>, which mostly follows the tenets of Brutalist Web Design.
           </p>
