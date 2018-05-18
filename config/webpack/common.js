@@ -29,7 +29,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin(
       [ 
-        { from: './src/images/**/*', to: './images', flatten: true },
+        { from: './src/images/**/*', to: './images', flatten: true, ignore: [ "Icon.pxm", "Icon.png" ] },
+        { from: './src/images/favicon.ico', to: '.', flatten: true },
         { from: './src/html/**/*',   to: '.',        flatten: true, ignore: [ "index.html" ] }
       ], 
       {
