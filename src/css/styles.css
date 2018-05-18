@@ -1,3 +1,22 @@
 html {
   font-size: 21px;
 }
+
+.lst-square {
+  list-style-type: square;
+}
+
+.lsp-outside {
+  list-style-position: outside;
+}
+
+/* Copied from Tachyons - not sure how to re-use */
+@media screen and (min-width: 30em) {
+  .lst-square-ns {
+    list-style-type: square;
+  }
+
+  .lsp-outside-ns {
+    list-style-position: outside;
+  }
+}
