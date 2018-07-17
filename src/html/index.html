@@ -34,7 +34,11 @@
     <main class="pa3 center  measure-wide lh-copy" class="calisto">
       <article class="bb b--silver mb3">
         <h1 class="f-subheadline-ns f1 helvetica lh-solid mt0 mb3"><small class="f2-ns f3 db">Guidelines for</small> Brutalist Web Design</h1>
-        <h2 class="helvetica lh-solid mt0 fw3">Raw content true to its construction</h2>
+        <h2 class="helvetica mt0 fw3">Raw content true to its construction</h2>
+        <h3 class="helvetica mt0 fw3 f5">
+          By <a href="#about">David Bryant Copeland</a>
+          Updated <%= htmlWebpackPlugin.options.publishDate %> 
+        </h3>
         <ul class="f4 pl0-ns pl3 lst-square lsp-outside">
           <li>
             <a href="#readable-content">
@@ -333,7 +337,8 @@
         <section class="pa3 center measure-wide lh-copy mt0" class="calisto">
           <h1 class="helvetica f2 mt0">Colophon</h1>
           <p>
-            This site was built in HTML by hand, however its general assembly and packaging are done using <a class="" href="https://webpack.js.org">Webpack</a>.  The site is styled using <a class="" href="http://tachyons.io/">Tachyons</a>.  Headings are set in Helvetica, with a fallback to the system sans-serif.  Body text is set in Calisto, with a fallback to the system serif.
+            This site was built in HTML by hand and published on <%= htmlWebpackPlugin.options.publishDate %>.
+            Its general assembly and packaging are done using <a class="" href="https://webpack.js.org">Webpack</a>.  The site is styled using <a class="" href="http://tachyons.io/">Tachyons</a>.  Headings are set in Helvetica, with a fallback to the system sans-serif.  Body text is set in Calisto, with a fallback to the system serif.
           </p>
         </section>
       </div>

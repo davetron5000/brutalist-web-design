@@ -21,6 +21,7 @@ module.exports = {
   plugins: [
     new HtmlPlugin({
       template: "./src/html/index.html",
+      publishDate: (new Date()).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
       minify: {
         collapseWhitespace: true,
         conservativeCollapse: true,
