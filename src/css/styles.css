@@ -20,3 +20,60 @@ html {
     list-style-position: outside;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .b--dark-gray { border-color: #CCCCCC; }
+  .b--gray { } /* Not overridden as no need */
+  .b--moon-gray { border-color: #333333; }
+  .b--silver { border-color: #666666; }
+
+  .bg-near-black { background-color: #eeeeee; }
+  .bg-near-white { background-color: #111111; }
+  .bg-washed-blue { }   /* Not overridden as this color is used explicitly to mean washed blue */
+  .bg-washed-yellow { } /* Not overridden as this color is used explicitly to mean washed yellow */
+  .bg-white { background-color: #000000; }
+  .bg-yellow { background-color: #dddddd; }
+
+  .black { color: #ffffff; }
+  .dark-gray { color: #CCCCCC; }
+  .light-blue { color: #00449E; }
+  .light-gray { color: #111111; }
+  .mid-gray { color: #666666; }
+  .near-black { color: #dddddd; }
+  .red { color: #E7040F; }
+
+  .hover-big-light-yellow { } /* Not overridden as this color is used explicitly to mean light yellow on hover */
+
+  .shadow-5 { 
+    border: solid thin;
+    box-shadow: 0px 0px 4px 2px rgba( 255, 255, 255, 0.4 ); 
+  }
+
+  aside.bg-near-white {
+    background-color: #222;
+  }
+
+  aside.bg-washed-blue.dark-gray {
+    color: #222;
+  }
+
+  aside input[type=submit] {
+    border:solid thin white;
+    background-color: #444;
+    color: #ddd;
+    border-radius: 4px;
+  }
+  
+  a:link {
+    color: rgb(10,132,255);
+  }
+  a:link.light-blue {
+    color: #00449E; 
+  }
+  a:visited {
+    color: rgb(191,90,242);
+  }
+  a:visited.light-blue {
+    color: #5E2CA5;
+  }
+}
