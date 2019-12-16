@@ -40,7 +40,7 @@ html {
   .light-gray { color: #111111; }
   .mid-gray { color: #666666; }
   .near-black { color: #dddddd; }
-  .red { color: #E7040F; }
+  .red { color: #ff3333; }
 
   .hover-big-light-yellow { } /* Not overridden as this color is used explicitly to mean light yellow on hover */
 
