@@ -29,7 +29,6 @@
     "serve": "webpack-dev-server",
     "deploy": "yarn clean && yarn prod && yarn sync-s3 && yarn invalidate-cache",
     "sync-s3": "aws s3 sync --cache-control='max-age=31536000' --profile=personal production/ s3://brutalist-web.design",
-
     "invalidate-cache": "aws cloudfront create-invalidation --profile=personal --distribution-id=E1K5EAG31Z8JS2 --paths=/\\* && aws cloudfront create-invalidation --profile=personal --distribution-id=E1K5EAG31Z8JS2 --paths=/images\\*"
   }
 }

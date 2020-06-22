@@ -31,6 +31,9 @@
     <link ref="preconnect" href="https://track.gaug.es">
     <link ref="preconnect" href="https://d2fuc4clr7gvcn.cloudfront.net">
     <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+    <% htmlWebpackPlugin.files.css.forEach( (file) => { %>
+      <link href="<%= file %>" rel="stylesheet">
+    <% })%>
   </head>
   <body class="bg-near-white near-black">
     <main class="pa3 center  measure-wide lh-copy" class="calisto">
@@ -323,7 +326,7 @@
           <a name="about"></a>
           <h1 class="helvetica f2 mt0">About</h1>
           <p>
-            Everything on this site is copyright &copy; 2018–2020, by David Copeland and licensed
+            Everything on this site is copyright &copy; 2018–<%= htmlWebpackPlugin.options.publishYear %>, by David Copeland and licensed
             under the Creative Commons <a class="light-blue" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a> license.  The <a class="light-blue" href="https://github.com/davetron5000/brutalist-web-design">source is hosted on GitHub</a>. I welcome your changes or corrections, especially with regard to accessibility.
           </p>
           <img class="dn db-ns ml3 mb2 fr w-25 mt1 ml0 ba b--moon-gray" src="images/david-copeland-portrait.jpg" alt="Picture of this site's author, David Copeland" nopin="nopin">
