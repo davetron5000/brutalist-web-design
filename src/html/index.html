@@ -28,12 +28,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="preconnect" href="https://track.gaug.es">
-    <link rel="preconnect" href="https://d2fuc4clr7gvcn.cloudfront.net">
+    
     <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
     <% htmlWebpackPlugin.files.css.forEach( (file) => { %>
       <link href="<%= file %>" rel="stylesheet">
     <% })%>
+    <script defer data-domain="brutalist-web.design" src="https://plausible.io/js/script.js"></script>
   </head>
   <body class="bg-near-white near-black">
     <div class="pa3 center  measure-wide lh-copy" class="calisto">
@@ -363,18 +363,5 @@
         </section>
       </div>
     </footer>
-    <script>
-      var _gauges = _gauges || [];
-      (function() { var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '5aff5aa154a1b97a229142e1');
-        t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
-        t.src = 'https://d2fuc4clr7gvcn.cloudfront.net/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
   </body>
 </html>
