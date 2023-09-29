@@ -6,14 +6,10 @@
     <title>Brutalist Web Design</title>
     <meta name="description" content="Guidelines for web design that adhere to the tenets and ethos of Brutalism">
     <meta name="author" content="David Copeland">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@davetron5000">
-    <meta name="twitter:creator" content="@davetron5000">
-    <meta name="twitter:title" content="Brutalist Web Design">
     <meta name="og:title" content="Brutalist Web Design">
+    <meta name="og:type" content="website">
     <meta name="og:url" content="https://brutalist-web.design">
     <meta property="og:type" content="website">
-    <meta name="twitter:description" content="Guidelines for designing websites true to their materials: content.">
     <link rel="copyright" href="#about">
     <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
@@ -28,11 +24,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    
+    <link rel="canonical" href="https://brutalist-web.design" />
+    <meta itemprop="ai-content-declaration:version" content="1.0.0">
+    <meta itemprop="ai-content-declaration:level" content="none">
     <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
-    <% htmlWebpackPlugin.files.css.forEach( (file) => { %>
-      <link href="<%= file %>" rel="stylesheet">
-    <% })%>
+    <link href="/main.css" rel="stylesheet">
     <script defer data-domain="brutalist-web.design" src="https://plausible.io/js/script.js"></script>
   </head>
   <body class="bg-near-white near-black">
@@ -40,9 +36,8 @@
       <header class="bb b--silver mb3">
         <h1 class="f-subheadline-ns f1 helvetica lh-solid mt0 mb3"><small class="f2-ns f3 db">Guidelines for</small> Brutalist Web Design</h1>
         <h2 class="helvetica mt0 fw3">Raw content true to its construction</h2>
-        <h3 class="helvetica mt0 fw3 f5">
-          By <a href="#about">David Bryant Copeland</a>
-          Updated <%= htmlWebpackPlugin.options.publishDate %> 
+        <h3 class="helvetica mt0 fw3 f5 lh-copy">
+          By <a href="#about">David Bryant Copeland</a>, <a class="" href="changelog.html">last updated <time datetime="2023-09-29">September 29, 2023</time></a>.
         </h3>
         <nav>
           <ul class="f4 pl0-ns pl3 lst-square lsp-outside">
@@ -85,8 +80,8 @@
         </nav>
       </header>
       <main>
-        <section class="cf mt2">
-          <h2 class="f1 lh-solid mt0 helvetica"><small class="f3 db">What is</small> Brutalist Web Design?</h2>
+        <section class="cf">
+          <h2 class="f1 lh-solid mt3 helvetica"><small class="f3 db">What is</small> Brutalist Web Design?</h2>
           <p>
             The term <em>brutalism</em>
             is often associated with <a href="https://en.wikipedia.org/wiki/Brutalist_architecture">Brutalist Architecture</a>, however it can apply to other forms of construction, such as web design.  This website explains how.
@@ -189,7 +184,7 @@
               <figure class="ba b--gray pa3 ma0">
                 <form class="pa3 bg-washed-yellow black br2 cf">
                   <label for="also-not-real-form-email" class="b db f4 mb2 always-near-black baskerville">Enter your Email</label>
-                  <input class="db w-100" type="email" id="also-not-real-form-email" name="email" placeholder="e.g. pat@example.com">
+                  <input class="db w-100 pa2" type="email" id="also-not-real-form-email" name="email" placeholder="e.g. pat@example.com">
                   <input type="submit" value="Submit" class="baskerville fr bg-animate always-near-black hover-bg-light-yellow ba pointer br3 pa2 mt3 bg-yellow">
                 </form>
                 <figcaption>
@@ -270,7 +265,7 @@
               <p>
                 A website is neither an application nor a video game.  It is for content, and so its design must serve that purpose. Being true to these materials need not imply a boring website or require that all sites look the same.
               </p>
-              <aside class="dn db-ns fl helvetica f6 fw3 w-50-ns bg-washed-blue dark-gray pl2 pr2 pt1 pb1 mr3 mt1 mb1 tr">
+              <aside class="dn db-ns fl helvetica br2 f7 fw5 w-50-ns bg-washed-blue black pl2 pr2 pt1 pb1 mr3 mt1 mb1 tr">
                 <span class="fl">
                   🧐
                 </span>
@@ -338,14 +333,14 @@
       <div class="light-gray bg-near-black">
         <section class="pa3 center measure-wide lh-copy mt0 cf calisto">
           <a name="about"></a>
-          <h2 class="helvetica f2 mt0">About</h2>
+          <h2 class="helvetica f2 mb1">About</h2>
           <p>
-            Everything on this site is copyright &copy; 2018–<%= htmlWebpackPlugin.options.publishYear %>, by David Copeland and licensed
+            Everything on this site is copyright &copy; 2018–2023, by David Copeland and licensed
             under the Creative Commons <a class="light-blue" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a> license.  The <a class="light-blue" href="https://github.com/davetron5000/brutalist-web-design">source is hosted on GitHub</a>. I welcome your changes or corrections, especially with regard to accessibility.
           </p>
           <img class="dn db-ns ml3 mb2 fr w-25 mt1 ml0 ba b--moon-gray" src="images/david-copeland-portrait.jpg" alt="Picture of this site's author, David Copeland" nopin="nopin">
           <p>
-            I go by “Dave”, write <a class="light-blue" href="https://naildrivin5.com/books/index.html">books</a> as “David Bryant Copeland” and am <a class="light-blue" href="https://twitter.com/davetron5000">@davetron5000</a> on most social media platforms.  I'm a programmer and author, most recently the chief software architect and a director of engineering at <a class="light-blue" href="https://multithreaded.stitchfix.com/">Stitch Fix</a> (warning: <em>not a Brutalist Web Design</em>).  I write occasionally on my <a class="light-blue" href="https://naildrivin5.com">blog</a>, which mostly follows the tenets of Brutalist Web Design.
+            I go by “Dave”, write <a class="light-blue" href="https://naildrivin5.com/books/index.html">books</a> as “David Bryant Copeland” and am <a class="light-blue" href="https://ruby.social/@davetron5000">@davetron5000</a> on most social media platforms.  I'm a programmer and author, having previously been the chief software architect and a director of engineering at <a class="light-blue" href="https://multithreaded.stitchfix.com/">Stitch Fix</a> (warning: <em>not a Brutalist Web Design</em>) then CTO of a mental health startup.  I write occasionally on my <a class="light-blue" href="https://naildrivin5.com">blog</a>, which mostly follows the tenets of Brutalist Web Design.
           </p>
           <div class="tc">
             <img class="dn-ns w-50 ba b--moon-gray" src="images/david-copeland-portrait.jpg" alt="Picture of this site's author, David Copeland" nopin="nopin">
@@ -353,12 +348,14 @@
         </section>
       </div>
       <div>
-        <section class="pa3 center measure-wide lh-copy mt0 calisto">
-          <h2 class="helvetica f2 mt0">Colophon</h2>
+        <section class="pa3 center measure-wide lh-copy calisto">
+          <h2 class="helvetica f2 mb1">Colophon</h2>
           <p>
-            This site was built in HTML by hand and published on <%= htmlWebpackPlugin.options.publishDate %>.
-            Its general assembly and packaging are done using <a class="" href="https://webpack.js.org">Webpack</a>.  The site is styled using <a class="" href="https://tachyons.io/">Tachyons</a>.  Headings are set in Helvetica, with a fallback to the system sans-serif.  Body text is set in Calisto, with a fallback to the system serif.
-            This site also supports “dark mode”, based on your OS settings.
+            This site was built in HTML by hand and published on Sept 29, 2023. It uses <code>esbuild</code> to assemble everything. The site is styled using <a class="" href="https://tachyons.io/">Tachyons</a>.  Headings are set in Helvetica, with a fallback to the system sans-serif.  Body text is set in Calisto, with a fallback to the system serif.
+            This site supports “dark mode”, based on your OS settings. It should also produce a slightly higher-contrast version if your settings indicate you prefer increased contrast.
+          </p>
+          <p>
+            This site was created <a href="https://declare-ai.org/1.0.0-alpha1/none.html">without any assistance from a Generative AI</a>.
           </p>
         </section>
       </div>

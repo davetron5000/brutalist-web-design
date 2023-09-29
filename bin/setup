@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+npm install
+curl "https://unpkg.com/tachyons@4.12.0/css/tachyons.css" > src/css/tachyons.css

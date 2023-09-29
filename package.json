@@ -5,30 +5,12 @@
   "author": "David Copeland",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "tachyons": "^4.9.1"
-  },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.5.1",
-    "css-loader": "^1.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.4.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "webpack": "^4.7.0",
-    "webpack-cli": "^3.0.0",
-    "webpack-dev-server": "^3.1.4",
-    "webpack-merge": "^4.1.2"
+    "chokidar-cli": "^3.0.0",
+    "esbuild": "^0.19.4",
+    "http-server": "^14.1.1"
   },
-  "config": {
-    "webpack_args": " --config webpack.config.js --display-error-details"
-  },
-  "scripts": {
-    "dev": "webpack $npm_package_config_webpack_args",
-    "prod": "webpack $npm_package_config_webpack_args -p --env=production",
-    "clean": "rm -rf production development",
-    "serve": "webpack-dev-server",
-    "deploy": "yarn clean && yarn prod && yarn sync-s3 && yarn invalidate-cache",
-    "sync-s3": "aws s3 sync --cache-control='max-age=31536000' --profile=personal production/ s3://brutalist-web.design",
-    "invalidate-cache": "aws cloudfront create-invalidation --profile=personal --distribution-id=E1K5EAG31Z8JS2 --paths=/\\* && aws cloudfront create-invalidation --profile=personal --distribution-id=E1K5EAG31Z8JS2 --paths=/images\\*"
+  "dependencies": {
+    "tachyons": "^4.12.0"
   }
 }

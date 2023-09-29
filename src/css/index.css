@@ -1,5 +1,12 @@
+@import "tachyons/css/tachyons.css";
+
 html {
   font-size: 21px;
+}
+
+.helvetica {
+  font-family: "Helvetica", sans-serif;
+  
 }
 
 .lst-square {
@@ -20,6 +27,17 @@ html {
     list-style-position: outside;
   }
 }
+
+@media (prefers-contrast: more) {
+  .fw1, .fw2, .fw3 {
+    font-weight: 400;
+  }
+  .bg-near-white { background-color: #fff; }
+  .bg-near-black { background-color: #000; }
+  .near-white { color: #fff; }
+  .near-black { color: #000; }
+}
+
 
 @media (prefers-color-scheme: dark) {
   .b--dark-gray { border-color: #CCCCCC; }
@@ -76,5 +94,10 @@ html {
   a:visited.light-blue {
     color: #5E2CA5;
   }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  .bg-near-black { background-color: #ffffff; }
+  .bg-near-white { background-color: #000000; }
 }
 .always-near-black { color: #111111; }

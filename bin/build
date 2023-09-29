@@ -1,0 +1,61 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" = "help" ] || [ "$1" = "-h" ]; then
+  echo "usage: $0 [dev|production]"
+  exit 0
+fi
+
+ENV=$1
+if [ -z "${ENV}" ]; then
+  ENV=dev
+fi
+
+
+APP_VERSION=init
+
+
+if [ "${ENV}" = "dev" ]; then
+  echo "Building for dev"
+  mkdir -p serve/dev
+  echo "Building CSS"
+
+  npx esbuild \
+    --sourcemap \
+    --bundle \
+    --outfile=serve/dev/main.css \
+    src/css/index.css
+
+  echo "Copying HTML"
+  rsync -a src/html/ serve/dev
+
+  echo "Copying images"
+  rsync -a src/images/ serve/dev/images
+  mv serve/dev/images/favicon.ico serve/dev
+
+else
+  if [ "${ENV}" = "production" ]; then
+    echo "Building for production"
+    mkdir -p serve/production
+    echo "Building CSS"
+
+    npx esbuild \
+      --sourcemap \
+      --bundle \
+      --minify \
+      --outfile=serve/production/main.css \
+      src/css/index.css
+
+    echo "Copying HTML"
+    rsync -a src/html/ serve/production
+
+    echo "Copying images"
+    rsync -a src/images/ serve/production/images
+    mv serve/production/images/favicon.ico serve/production
+    echo "You may now deploy serve/production to production"
+  else
+    echo "Not implemented"
+    exit 1
+  fi
+fi

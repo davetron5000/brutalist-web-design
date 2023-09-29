@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -e
+
+usage() {
+  echo "usage: $0 [-h] [ -e dev|production]"
+}
+
+ENV=dev
+while getopts ":he:" opt "${@}"; do
+  case ${opt} in
+    h)
+      usage
+      exit 0
+      ;;
+    e)
+      ENV=${OPTARG}
+      ;;
+    \?)
+      echo "Unknown flag: ${OPTARG}"
+      usage
+      exit 1
+      ;;
+  esac
+done
+
+if [ "${ENV}" = "dev" ]; then
+  npx http-server serve/dev -p 6502 -c-1
+else
+if [ "${ENV}" = "production" ]; then
+  npx http-server serve/production -p 6502 -c-1
+else
+  echo "Unknown environment: '${ENV}'"
+  usage
+  exit 1
+fi
+fi

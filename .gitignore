@@ -6,3 +6,5 @@ production
 development
 # Don't need to check in my session vim file
 Session.vim
+# Used to serve local viewing.
+serve

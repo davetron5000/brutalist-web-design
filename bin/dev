@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+trap killgroup SIGINT
+
+killgroup() {
+  echo "Killing everything..."
+  kill 0
+}
+
+SHELL=/bin/bash npx chokidar --polling \
+                             "src/html/**/*.html" \
+                             "src/css/**/*.css" \
+                             "src/images/**" \
+                             --command "bin/build" &
+bin/run &
+wait
