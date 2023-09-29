@@ -2,6 +2,6 @@
 
 set -e
 
-aws s3 sync site s3://brutalist-web.design --profile=personal --cache-control="max-age=31536000"
+aws s3 sync serve/production s3://brutalist-web.design --profile=personal --cache-control="max-age=31536000"
 
 aws cloudfront create-invalidation --distribution-id=E1K5EAG31Z8JS2 --paths="/*" --profile=personal
