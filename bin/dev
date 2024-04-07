@@ -9,7 +9,8 @@ killgroup() {
   kill 0
 }
 
-SHELL=/bin/bash npx chokidar --polling \
+SHELL=/bin/bash npx chokidar --initial \
+                             --polling \
                              "src/html/**/*.html" \
                              "src/css/**/*.css" \
                              "src/images/**" \
