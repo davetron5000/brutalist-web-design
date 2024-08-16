@@ -37,6 +37,8 @@ html {
   .near-black { color: #000; }
 }
 
+.light-mode-only { display: inline; }
+.dark-mode-only  { display: none; }
 
 @media (prefers-color-scheme: dark) {
   .b--dark-gray { border-color: #CCCCCC; }
@@ -50,6 +52,7 @@ html {
   .bg-washed-yellow { } /* Not overridden as this color is used explicitly to mean washed yellow */
   .bg-white { background-color: #000000; }
   .bg-yellow { background-color: #dddddd; }
+  .black-always { color: black; }
 
   .black { color: #ffffff; }
   .dark-gray { color: #CCCCCC; }
@@ -82,17 +85,19 @@ html {
   }
   
   a:link {
-    color: rgb(10,132,255);
+    color: #CDECFF;
   }
   a:link.light-blue {
     color: #00449E; 
   }
   a:visited {
-    color: rgb(191,90,242);
+    color: #A463F2;
   }
   a:visited.light-blue {
     color: #5E2CA5;
   }
+  .light-mode-only { display: none; }
+  .dark-mode-only  { display: inline; }
 }
 
 @media (prefers-contrast: more) and (prefers-color-scheme: dark) {
