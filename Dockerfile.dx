@@ -1,6 +1,6 @@
 FROM node:20
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update && apt-get install -yq rsync vim && echo "set -o vi" >> ~/.bashrc
 
 # This entrypoint produces a nice help message and waits around for you to do
